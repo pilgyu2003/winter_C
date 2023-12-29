@@ -9,10 +9,7 @@ int main(void) {
     printf("Enter second integers: ");
     scanf("%d", &y);
 
-    printf("Sum: %d\n", x + y);
-    printf("Difference: %d\n", x - y);
-    printf("Product: %d\n",  x * y);
-    printf("Quotient: %.5f\n", (double)x / y);
+    printf("Sum: %d\nDifference: %d\nProduct: %d\nQuotient: %.5f\n", x + y, x - y, x * y, (double)x / y);
 
     return 0;
 }
