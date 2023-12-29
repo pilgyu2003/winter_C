@@ -2,7 +2,12 @@
 
 int main(void) {
 
-    int x = 20, y = 10;
+    int x, y;
+
+    printf("Enter first integers: ");
+    scanf("%d", &x);
+    printf("Enter second integers: ");
+    scanf("%d", &y);
 
     int sum = x + y;
     int difference = x - y;
