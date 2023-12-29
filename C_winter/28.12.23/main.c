@@ -9,15 +9,10 @@ int main(void) {
     printf("Enter second integers: ");
     scanf("%d", &y);
 
-    int sum = x + y;
-    int difference = x - y;
-    int product = x * y;
-    float quotient = x / y;
-
-    printf("Sum: %d\n", sum);
-    printf("Difference: %d\n", difference);
-    printf("Product: %d\n", product);
-    printf("Quotient: %f\n", quotient);
+    printf("Sum: %d\n", x + y);
+    printf("Difference: %d\n", x - y);
+    printf("Product: %d\n",  x * y);
+    printf("Quotient: %.5f\n", (double)x / y);
 
     return 0;
 }
