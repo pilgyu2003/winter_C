@@ -1,85 +1,104 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>아코디언 메뉴</title>
-    <style>
-        .frame .content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
-        }
-
-        .frame.active .content {
-            max-height: 1000px; /* 내용에 따라 조정 가능 */
-        }
-
-        .heading {
-            cursor: pointer;
-            padding: 10px;
-            border: 1px solid #ddd;
-        }
-
-        .p-2 {
-            padding: 10px;
-        }
-    </style>
-</head>
-<body>
-
-<div data-role="accordion"
-     data-one-frame="false"
-     data-show-active="true"
-     data-on-frame-open="console.log('frame was opened!', arguments[0])"
-     data-on-frame-close="console.log('frame was closed!', arguments[0])">
-    <div class="frame">
-        <div class="heading">Header 1</div>
-        <div class="content">
-            <div class="p-2">Cur luba manducare? Pol, a bene ionicis tormento...</div>
+<ul class="accordion">
+    <span class="target" id="accordion"></span>
+    <li class="accordion__li">
+      <span class="target" id="accordion1"></span>
+      <a href="#accordion1" class="open-accordion" title="open">
+        <div>
+          <div>
+            <span class="accordion__num">01</span>
+            <h5 class="accordion__title">
+              Non consectetur a erat nam at lectus urna duis?
+            </h5>
+          </div>
+          <i class="fas fa-chevron-down"></i>
         </div>
-    </div>
-    <div class="frame active">
-        <div class="heading">Header 2</div>
-        <div class="content">
-            <div class="p-2">Wildly open a starship. Belay, ye small wench- set...</div>
+      </a>
+      <a href="#accordion" class="close-accordion" title="close">
+        <div>
+          <div>
+            <span class="accordion__num">01</span>
+            <h5 class="accordion__title">
+              Non consectetur a erat nam at lectus urna duis?
+            </h5>
+          </div>
+          <i class="fas fa-chevron-up"></i>
         </div>
-    </div>
-    <div class="frame">
-        <div class="heading">Header 3</div>
-        <div class="content">
-            <div class="p-2">Bitter turkey can be made tasty by brushing with...</div>
+      </a>
+      <div class="accordion__content-container">
+        <p class="accordion__content">
+          Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id
+          volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna
+          fringilla urna porttitor rhoncus dolor purus non.
+        </p>
+        <div>
+    </li>
+    <li class="accordion__li">
+      <span class="target" id="accordion2"></span>
+      <a href="#accordion2" class="open-accordion" title="open">
+        <div>
+          <div>
+            <span class="accordion__num">02</span>
+            <h5 class="accordion__title">
+              Feugiat scelerisque varius morbi enim nunc?
+            </h5>
+          </div>
+          <i class="fas fa-chevron-down"></i>
         </div>
-    </div>
-</div>
-
-<script>
-    document.querySelectorAll('.accordion .heading').forEach(heading => {
-        heading.addEventListener('click', function() {
-            const frame = this.parentElement;
-            const accordion = frame.parentElement;
-            const isOneFrame = accordion.getAttribute('data-one-frame') === 'true';
-
-            if (isOneFrame) {
-                accordion.querySelectorAll('.frame').forEach(f => {
-                    if (f !== frame) {
-                        f.classList.remove('active');
-                        f.querySelector('.content').style.maxHeight = 0;
-                    }
-                });
-            }
-
-            frame.classList.toggle('active');
-            const content = this.nextElementSibling;
-            if (frame.classList.contains('active')) {
-                content.style.maxHeight = content.scrollHeight + 'px';
-                console.log('frame was opened!', frame);
-            } else {
-                content.style.maxHeight = 0;
-                console.log('frame was closed!', frame);
-            }
-        });
-    });
-</script>
-
-</body>
-</html>
+      </a>
+      <a href="#accordion" class="close-accordion" title="close">
+        <div>
+          <div>
+            <span class="accordion__num">02</span>
+            <h5 class="accordion__title">
+              Feugiat scelerisque varius morbi enim nunc?
+            </h5>
+          </div>
+          <i class="fas fa-chevron-up"></i>
+        </div>
+      </a>
+      <div class="accordion__content-container">
+        <p class="accordion__content">
+          Dolor sit amet consectetur adipiscing elit pellentesque habitant
+          morbi. Id interdum velit laoreet id donec ultrices. Fringilla
+          phasellus faucibus scelerisque eleifend donec pretium. Est
+          pellentesque elit ullamcorper dignissim. Mauris ultrices eros in
+          cursus turpis massa tincidunt dui.
+        </p>
+      </div>
+    </li>
+    <li class="accordion__li">
+      <span class="target" id="accordion3"></span>
+      <a href="#accordion3" class="open-accordion" title="open">
+        <div>
+          <div>
+            <span class="accordion__num">03</span>
+            <h5 class="accordion__title">
+              Dolor sit amet consectetur adipiscing elit?
+            </h5>
+          </div>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </a>
+      <a href="#accordion" class="close-accordion" title="close">
+        <div>
+          <div>
+            <span class="accordion__num">03</span>
+            <h5 class="accordion__title">
+              Dolor sit amet consectetur adipiscing elit?
+            </h5>
+          </div>
+          <i class="fas fa-chevron-up"></i>
+        </div>
+      </a>
+      <div class="accordion__content-container">
+        <p class="accordion__content">
+          Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis
+          orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra
+          diam sit amet nisl suscipit. Rutrum tellus pellentesque eu
+          tincidunt. Lectus urna duis convallis convallis tellus. Urna
+          molestie at elementum eu facilisis sed odio morbi quis
+        </p>
+      </div>
+    </li>
+  </ul>
+  <script src="https://kit.fontawesome.com/70e0dc75f1.js" crossorigin="anonymous"></script>
