@@ -13,10 +13,10 @@ int main() {
     if (disc > 0) {
         root1 = (-b + sqrt(disc)) / (2 * a);
         root2 = (-b - sqrt(disc)) / (2 * a);
-        printf("real roots exist: %.2lf & %.2lf\n", root1, root2);
+        printf("two real roots exist: %.2lf & %.2lf\n", root1, root2);
     } else if (disc == 0) {
         root1 = -b / (2 * a);
-        printf("real root exists: %.2lf\n", root1);
+        printf("one real root exists: %.2lf\n", root1);
     } else {
         double real = -b / (2 * a);
         double img = sqrt(-disc) / (2 * a);
