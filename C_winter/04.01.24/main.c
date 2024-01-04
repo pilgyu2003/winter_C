@@ -3,24 +3,24 @@
 
 int main() {
     double a, b, c;
-    double discriminant, root1, root2;
+    double disc, root1, root2;
 
-    printf("Enter the coefficients a, b, and c: ");
+    printf("a, b, and c: ");
     scanf("%lf %lf %lf", &a, &b, &c);
 
-    discriminant = b * b - 4 * a * c;
+    disc = b * b - 4 * a * c;
 
-    if (discriminant > 0) {
-        root1 = (-b + sqrt(discriminant)) / (2 * a);
-        root2 = (-b - sqrt(discriminant)) / (2 * a);
-        printf("Two distinct real roots exist: %.2lf and %.2lf\n", root1, root2);
-    } else if (discriminant == 0) {
+    if (disc > 0) {
+        root1 = (-b + sqrt(disc)) / (2 * a);
+        root2 = (-b - sqrt(disc)) / (2 * a);
+        printf("real roots exist: %.2lf & %.2lf\n", root1, root2);
+    } else if (disc == 0) {
         root1 = -b / (2 * a);
-        printf("One real root exists: %.2lf\n", root1);
+        printf("real root exists: %.2lf\n", root1);
     } else {
-        double realPart = -b / (2 * a);
-        double imaginaryPart = sqrt(-discriminant) / (2 * a);
-        printf("Complex roots exist: %.2lf + %.2lfi and %.2lf - %.2lfi\n", realPart, imaginaryPart, realPart, imaginaryPart);
+        double real = -b / (2 * a);
+        double img = sqrt(-disc) / (2 * a);
+        printf("Complex roots exist: %.2lf + %.2lfi & %.2lf - %.2lfi\n", real, img, real, img);
     }
 
     return 0;
