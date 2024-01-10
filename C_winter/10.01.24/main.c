@@ -27,9 +27,16 @@ int max(int x, int y) {
 }
 
 int main(void) {
-    int a = 10;
-    int b = 20;
-    int c = max(a, b);
-    printf("max = %d\n", c);
+
+    int x,y,larger;
+
+    printf("정수 두 개를 입력하세요: ");
+    scanf("%d %d", &x, &y);
+
+    larger = max(x, y);
+    printf("큰 수는 %d입니다.\n", larger);
+
     return 0;
+    
 }
+
