@@ -1,10 +1,18 @@
 #include <stdio.h>
 
-void un() {
-
+void print_stars() {
+    for (int i = 0; i < 30; i++) {
+        printf("*");
+    }
 }
 
 int main(void) {
+
+    print_stars();
+    printf("\n");
+    printf("Hello, World!\n");
+    print_stars();
+    printf("\n");
 
     return 0;
 
