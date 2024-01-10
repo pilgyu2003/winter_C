@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 // void print_stars() {
 //     for (int i = 0; i < 30; i++) {
@@ -81,3 +82,16 @@
 
 
 // }
+
+
+int main(void) {
+
+    double result, value = 1.6;
+    
+    result = floor(value);
+    printf("%lf\n", result);
+
+    result = ceil(value);
+    printf("%lf\n", result);
+
+}
