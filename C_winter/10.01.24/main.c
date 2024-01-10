@@ -47,3 +47,37 @@
 // }
 
 
+void printMenu() {
+
+
+}
+
+int main(void) { 
+
+    char choice;
+    double temp;
+
+    while(1) {
+        printMenu();
+        print("메뉴를 선택하세요: ");
+        choice = getchar();
+        if (choice == 'q') {
+            break;
+        }
+        else if (choice == 'c') {
+            printf("섭씨온도:");
+            scanf("%lf", &temp);
+            printf("화씨온도: %lf\n", temp * 9 / 5 + 32);
+        }
+        else if (choice == 'f') {
+            printf("화씨온도:");
+            scanf("%lf", &temp);
+            printf("섭씨온도: %lf\n", (temp - 32) * 5 / 9);        
+        }
+        getchar();
+        
+    }
+    
+
+
+}
