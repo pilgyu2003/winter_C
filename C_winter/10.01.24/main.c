@@ -18,24 +18,32 @@
 
 // }
 
-int max(int x, int y) {
-    if (x > y) {
-        return x;
-    } else {
-        return y;
-    }
-}
+// int max(int x, int y) {
+//     if (x > y) {
+//         return x;
+//     } else {
+//         return y;
+//     }
+// }
 
-int main(void) {
+// int get_integer() {
+//     int num;
+//     printf("정수를 입력하세요: ");
+//     scanf("%d", &num);
+//     return num;
+// }
 
-    int x,y,larger;
+// int main(void) {
 
-    printf("정수 두 개를 입력하세요: ");
-    scanf("%d %d", &x, &y);
+//     int x, y, larger;
 
-    larger = max(x, y);
-    printf("큰 수는 %d입니다.\n", larger);
+//     x = get_integer();
+//     y = get_integer();
 
-    return 0;
-}
+//     larger = max(x, y);
+//     printf("큰 수는 %d입니다.\n", larger);
+
+//     return 0;
+// }
+
 
