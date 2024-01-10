@@ -37,6 +37,5 @@ int main(void) {
     printf("큰 수는 %d입니다.\n", larger);
 
     return 0;
-    
 }
 
