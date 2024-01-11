@@ -7,7 +7,9 @@ int main(void) {
     time_t start_time = time(NULL);
     time_t end_time;
 
-    // Wait for 10 seconds
+    printf("엔터를 눌러 시작하세요.\n");
+    getchar(); // Wait for user to press Enter
+
     do {
         end_time = time(NULL);
     } while (end_time - start_time < 10);
