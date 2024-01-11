@@ -5,7 +5,7 @@ int main(void) {
     system("dir");
     printf("아무키나 치세요\n");
     getchar();
-    system("cls");
+    system("clear");
 
     return 0;
 }
