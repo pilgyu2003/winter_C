@@ -1,7 +1,9 @@
 #include <stdio.h>
+
 extern unsigned random_i(void);
 extern double random_f(void);
-extern int MOD; // extern 사용하여 변수 M 외부 연결됨
+extern int MOD; 
+
 int main(void)
 {
 int i;

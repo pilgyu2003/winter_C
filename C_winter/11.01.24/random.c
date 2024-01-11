@@ -1,4 +1,5 @@
 #define SEED 17
+
 int MULT = 25173;
 int INC = 13849;
 int MOD = 65536;
