@@ -1,15 +1,13 @@
 #include <stdio.h>
 
-void decimalToBinary(int x) {
-    if (x > 1) {
-        decimalToBinary(n / 2);
-    }
-    printf("%d", x % 2);
-}
+int main(void) {
+    int i = 10;
+    int c = 69;
+    float f = 12.3;
 
-int main() {
-    int decimal = 10;
-    decimalToBinary(decimal);
-    printf("\n");
+    printf("i의 주소: %p\n", &i);
+    printf("c의 주소: %p\n", &c);
+    printf("f의 주소: %p\n", &f);
+
     return 0;
 }
