@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-void decimalToBinary(int n) {
-    if (n > 1) {
+void decimalToBinary(int x) {
+    if (x > 1) {
         decimalToBinary(n / 2);
     }
-    printf("%d", n % 2);
+    printf("%d", x % 2);
 }
 
 int main() {
